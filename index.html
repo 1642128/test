@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect</title>
+    <script>
+        function redirectToUrl(event) {
+            event.preventDefault();
+            var input = document.getElementById('urlInput').value;
+            if (!input.startsWith('http://') && !input.startsWith('https://')) {
+                input = 'http://' + input;
+            }
+            window.location.href = input;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="redirectToUrl(event)">
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button type="submit">Go</button>
+    </form>
+</body>
+</html>
