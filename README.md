@@ -1,1 +1,1 @@
-[https://google.com](For Myself)
+[https://google.com](url)
